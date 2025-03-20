@@ -4,4 +4,4 @@ running gulp build to enable minification and optimization.
 
 set NODE_ENV=production or $env:NODE_ENV="production" or .env file 
 
-gulp build
+gulp build - for production

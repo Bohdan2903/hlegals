@@ -123,7 +123,7 @@ gulp.task('deploy', function () {
   return gulp.src('./dist/**/*').pipe(deploy())
 });
 
-const deploy = gulp.series(build, 'deploy');
+const deployGithubPages = gulp.series(build, 'deploy');
 
 // Export tasks
 exports.styles = styles;
@@ -133,5 +133,5 @@ exports.sprite = sprite;
 exports.pages = pages;
 exports.watch = watch;
 exports.build = build;
-exports.deploy = deploy;
+exports.deploy = deployGithubPages;
 exports.default = dev;
