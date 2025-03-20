@@ -1,0 +1,1 @@
+$(function(){$("#tabs").tabs();let o=$("#dialog-form").dialog({autoOpen:!1,height:400,width:350,modal:!0});$(".open-modal").click(function(){o.dialog("open")})});

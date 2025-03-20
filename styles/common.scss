@@ -1,0 +1,195 @@
+$main-gradient: linear-gradient(
+                228.57deg,
+                #323264 11.93%,
+                #323264 57.17%,
+                #643e72 87.46%
+);
+$gradient-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+$gradient-text: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+$gradient-text-reversed: linear-gradient(
+                90.13deg,
+                #ef8080 0.84%,
+                #f0145a 99.96%
+);
+
+$accent: rgba(240, 20, 90, 1);
+$blue: rgba(36, 163, 255, 1);
+$blue-hover: rgba(0, 133, 255, 1);
+$blue-active: rgba(0, 108, 207, 1);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+b,
+strong {
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 36px;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+h4 {
+  font-size: 22px;
+  line-height: 26px;
+}
+h5{
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Montserrat", sans-serif;
+  background: black;
+  color: white;
+}
+
+.container {
+  max-width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.small-btn {
+  padding: 5px 7px;
+  font-size: 12px;
+  line-height: 14px;
+  border-radius: 8px;
+  background: transparent;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: background 0.3s;
+  text-transform: uppercase;
+
+  &.active,
+  &:hover {
+    background: $accent;
+  }
+}
+
+.btn {
+  padding: 18px 30px;
+  color: white;
+  font-size: 16px;
+  min-width: 180px;
+  line-height: 20px;
+  font-weight: bold;
+  background: $blue;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+  transition: background 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background: $blue-hover;
+  }
+
+  &:active {
+    background: $blue-active;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-container(
+  $direction: "row",
+  $justifyContent: "flex-start",
+  $alignItems: "center",
+  $flexWrap: "wrap",
+  $gap: 10px
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-wrap: $flexWrap;
+  gap: $gap;
+}
+
+input, textarea {
+  background: rgba(255, 255, 255, 1);
+  display: block;
+  width: 100%;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: black;
+  border: 1px solid transparent;
+  &:focus {
+    border: 1px solid $blue;
+  }
+  //&:invalid {
+  //  border: 1px solid red;
+  //}
+  &:disabled {
+    background: rgba(179, 179, 186, 1);
+  }
+  &::placeholder {
+    color: rgba(179, 179, 186, 1);
+  }
+}
+textarea {
+  resize: none;
+  height: 130px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: calc(650px + 30px + 30px);
+    padding: 0 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: calc(904px + 60px + 60px);
+    padding: 0 60px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: calc(1320px + 60px + 60px);
+  }
+}
